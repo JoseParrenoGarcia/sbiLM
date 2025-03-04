@@ -12,11 +12,6 @@ if "HUGGINGFACE_API_KEY" in st.secrets:
 else:
     API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 
-# Debugging: Check if the key is loaded (REMOVE this in production)
-if not API_KEY:
-    st.error("❌ API Key not found! Make sure it's set in Streamlit secrets or as an environment variable.")
-    raise ValueError("API Key not found. Ensure HUGGINGFACE_API_KEY is set.")
-
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
 
