@@ -17,8 +17,6 @@ if not API_KEY:
     st.error("❌ API Key not found! Make sure it's set in Streamlit secrets or as an environment variable.")
     raise ValueError("API Key not found. Ensure HUGGINGFACE_API_KEY is set.")
 
-print(f"DEBUG: Loaded API Key - {API_KEY is not None}")
-
 HEADERS = {"Authorization": f"Bearer {API_KEY}"}
 
 
