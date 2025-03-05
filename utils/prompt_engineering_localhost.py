@@ -1,4 +1,16 @@
 import ollama
+import re
+
+def clean_response(response):
+    """
+    Cleans the response from DeepSeek by removing any text before </think> and stripping special tags.
+    """
+    # Remove everything BEFORE </think>
+    response_clean = re.sub(r".*</think>", "", response, flags=re.DOTALL).strip()
+
+    return response_clean
+
+
 
 def generate_feedback(feedback_text, feedback_type="Recognition"):
     """
@@ -24,5 +36,6 @@ def generate_feedback(feedback_text, feedback_type="Recognition"):
 
     # Call the local DeepSeek-R1 model using Ollama
     response = ollama.chat(model="deepseek-r1:14b", messages=[{"role": "user", "content": prompt}])
+    cleaned_response = clean_response(response["message"]["content"])
 
-    return response["message"]["content"]
+    return cleaned_response

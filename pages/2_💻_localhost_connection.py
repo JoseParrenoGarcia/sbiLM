@@ -13,7 +13,6 @@ st.set_page_config(
 # ---------------------------------------------------------------------
 # SIDEBAR
 # ---------------------------------------------------------------------
-st.sidebar.title("Navigation")
 
 # ---------------------------------------------------------------------
 # MAIN PANEL
@@ -23,10 +22,8 @@ st.title("SBI Feedback Generator")
 st.markdown("""
 ### Instructions:
 1. Select the type of feedback.
-2. Fill in the Situation, Behavior, Impact, and Next Steps fields.
+2. Fill in the text bock.
 3. Click 'Generate Feedback' to receive an AI-generated response.
-4. Click 'Regenerate' for an alternate response.
-5. Use 'Copy to Clipboard' or 'Download as TXT' to save your feedback.
 """)
 
 # Feedback Type Selection
