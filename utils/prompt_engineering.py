@@ -3,7 +3,9 @@ import requests
 import os
 
 # Load API key from secrets
-API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3"
+# API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1"
+API_URL = "https://api-inference.huggingface.co/models/tiiuae/falcon-7b-instruct"
+# API_URL = "https://api-inference.huggingface.co/models/deepseek-ai/deepseek-llm-7b-chat"
 
 # Try loading from Streamlit secrets first (for Streamlit Cloud deployment)
 if "HUGGINGFACE_API_KEY" in st.secrets:
@@ -58,13 +60,13 @@ def generate_feedback(feedback_text, feedback_type):
         - **Impact:** Share the effect this behavior had on the team, project, or outcome.
         - **Next Steps:** Suggest how to improve or reinforce this behavior in the future.
 
-        Below is an examples of recognition using SBI feedback:
-
-        **Recognition Example:**
-        **Situation:** During the client presentation, the team faced a difficult question about the data methodology.
-        **Behavior:** Alex confidently explained the statistical approach and provided clear, well-reasoned answers.
-        **Impact:** This increased the client's trust and led to a successful contract extension.
-        **Next Steps:** Continue preparing for potential tough questions in advance.
+        # Below is an examples of recognition using SBI feedback:
+        # 
+        # **Recognition Example:**
+        # **Situation:** During the client presentation, the team faced a difficult question about the data methodology.
+        # **Behavior:** Alex confidently explained the statistical approach and provided clear, well-reasoned answers.
+        # **Impact:** This increased the client's trust and led to a successful contract extension.
+        # **Next Steps:** Continue preparing for potential tough questions in advance.
 
         # **Growth Example:**
         # **Situation:** During the sprint review, deadlines were missed due to last-minute changes.
@@ -78,17 +80,17 @@ def generate_feedback(feedback_text, feedback_type):
         # **Impact:** The debugging process took longer, and team morale was affected.
         # **Next Steps:** Allow others to share their thoughts before interjecting.
 
-        **Output Format:** Use proper Markdown formatting:
-        - Bold headings (**Situation:**, **Behavior:**, etc.).
-        - Use bullet points or numbers where needed.
-        - Keep spacing clean and readable.
+        # **Output Format:** Use proper Markdown formatting:
+        # - Bold headings (**Situation:**, **Behavior:**, etc.).
+        # - Use bullet points or numbers where needed.
+        # - Keep spacing clean and readable.
 
-        **Output example:**
-        - **Situation:** During the team meeting, an issue with the data pipeline was raised.
-        - **Behavior:** You quickly analyzed the logs and identified the root cause.
-        - **Impact:** This prevented a major delay in the project timeline.
-        - **Next Steps:** We should document this process to improve troubleshooting in the future. Would you be happy to take the lead?
-        - Your quick thinking and problem-solving skills saved the team from a potential delay. By analyzing the logs and identifying the root cause of the data pipeline issue, you prevented a major setback in our project timeline. This demonstrates your ability to stay calm under pressure and make quick, informed decisions. Let's make sure to document this process so we can use it as a reference for future troubleshooting. Great job, Alex!
+        # **Output example:**
+        # - **Situation:** During the team meeting, an issue with the data pipeline was raised.
+        # - **Behavior:** You quickly analyzed the logs and identified the root cause.
+        # - **Impact:** This prevented a major delay in the project timeline.
+        # - **Next Steps:** We should document this process to improve troubleshooting in the future. Would you be happy to take the lead?
+        # - Your quick thinking and problem-solving skills saved the team from a potential delay. By analyzing the logs and identifying the root cause of the data pipeline issue, you prevented a major setback in our project timeline. This demonstrates your ability to stay calm under pressure and make quick, informed decisions. Let's make sure to document this process so we can use it as a reference for future troubleshooting. Great job, Alex!
 
         **Requirements:**  Ensure your feedback is:
         - Radically candid.

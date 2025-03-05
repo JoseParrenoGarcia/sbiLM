@@ -54,9 +54,6 @@ if "feedback_response" in st.session_state and st.session_state.feedback_respons
     # Ensure text is formatted correctly
     st.markdown(st.session_state.feedback_response, unsafe_allow_html=True)
 
-    st.markdown("### AI-Generated Feedback 2:")
-    st.write(st.session_state.feedback_response)
-
     # # Use a larger text area to fit structured output
     # st.text_area("Generated Feedback", cleaned_response, height=300)
 
