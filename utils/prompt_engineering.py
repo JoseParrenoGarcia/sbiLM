@@ -94,9 +94,8 @@ def generate_feedback(feedback_text, feedback_type):
 
         **Requirements:**  Ensure your feedback is:
         - Radically candid.
-        - Refers to the person we want to provide feedback to.
-        - Present the SBIN bullet points first.
-        - Follow them with a short paragraph which I can use to read out loud.
+        - Refers to the person we want to provide feedback to (ie, using <you>).
+        - Present the SBIN points as a well structured paragraph.
 
         Now, generate {feedback_type} feedback based on the following input:
 
